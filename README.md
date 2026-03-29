@@ -18,7 +18,7 @@ The entire pipeline runs in pure Kotlin on the Jetson Nano CPU. There are no Pyt
 
 | BEV Output | Ground Truth (FB-SSEM dataset) |
 |---|---|
-| ![BEV output](docs/bev_output.png) | ![Ground truth](docs/gt_crop_matched.png) |
+| ![BEV output](https://github.com/HassanTarekAppraid/Android-BEV-App/blob/master/BevSnapshots/bev_output.png) | ![Ground truth](docs/gt_crop_matched.png) |
 
 - **Resolution:** 500 × 500 px
 - **Coverage:** 10 m × 10 m ground area (5 m in each direction from rear axle)
@@ -60,9 +60,8 @@ Android-BEV-App/
 │               └── bev/0.png          # Ground truth overhead image (optional)
 ├── docs/
 │   ├── appraid_bev_system_flowchart.html   # Full pipeline flowchart
-│   ├── bev_animated_flowchart.html         # Step-by-step animated walkthrough
 │   ├── bev_slides_full.html                # 18-slide engineering presentation
-│   └── bev_video_script.txt                # Video narration script
+│   
 ├── camera_intrinsics.yml              # Calibrated fisheye lens parameters
 ├── camera_positions_for_extrinsics.txt # Camera mount positions and orientations
 └── README.md
