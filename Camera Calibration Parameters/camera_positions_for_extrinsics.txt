@@ -1,0 +1,9 @@
+cam_name, posi_x, posi_y, posi_z, rot_x, rot_y, rot_z
+Main Camera-front, 0, 0.406, 3.873, 26, 0, 180
+Main Camera-right, 1.015, 0.801, 2.04, 0, 90, 0
+Main Camera-left, -1.024, 0.8, 2.053, 0, -90, 0
+Main Camera-rear, 0.132, 0.744, -1.001, 3, 180, 180
+
+
+
+## origin is at the center of the rear axle.
