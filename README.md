@@ -42,6 +42,7 @@ The entire pipeline runs in pure Kotlin on the Jetson Nano CPU. There are no Pyt
   <img src="https://github.com/HassanTarek-AppraidTech/Android-BEV-App/blob/master/docs/UI.png" width="70%" />
 </p>
 
+- **Real-time Android interface running on Jetson Nano**
 ---
 ## Hardware
 
