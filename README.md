@@ -12,6 +12,12 @@ This app takes four fisheye camera images — front, left, rear, right — and c
 
 The entire pipeline runs in pure Kotlin on the Jetson Nano CPU. There are no Python dependencies, no network calls, no AI inference at runtime, and no GPU required. Every output pixel is traceable to a geometric formula.
 
+## 🌐 Live Presentation / Project Walkthrough
+
+Explore the interactive presentation for this project, including slides, architecture overview, and detailed explanations:
+
+👉 **https://hassantarek-appraidtech.github.io/Android-BEV-App/**
+
 ---
 
 ## Input
