@@ -37,7 +37,12 @@ The entire pipeline runs in pure Kotlin on the Jetson Nano CPU. There are no Pyt
 - **Compute time:** ~3 seconds on Jetson Nano CPU
 
 ---
+## App UI
 
+<p align="center">
+  <img src="https://github.com/HassanTarek-AppraidTech/Android-BEV-App/master/docs/UI.png" width="70%" />
+</p>
+---
 ## Hardware
 
 | Component | Details |
