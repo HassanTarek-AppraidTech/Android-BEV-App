@@ -45,26 +45,52 @@ The entire pipeline runs in pure Kotlin on the Jetson Nano CPU. There are no Pyt
 
 ```
 Android-BEV-App/
+│
 ├── app/
 │   └── src/main/
+│       ├── assets/
+│       │   └── bev_images/            ← Fisheye images
+│       │       ├── front/0.png
+│       │       ├── left/0.png
+│       │       ├── rear/0.png
+│       │       ├── right/0.png
+│       │       └── bev/0.png          ← Ground truth overhead image
 │       ├── java/com/example/bevviewer/
-│       │   ├── BevProcessor.kt        # Core IPM algorithm — all geometry lives here
-│       │   └── MainActivity.kt        # Jetpack Compose TV UI and orchestration
-│       ├── AndroidManifest.xml        # TV launcher declaration, no touchscreen required
-│       └── assets/
-│           └── bev_images/
-│               ├── front/0.png        # Fisheye images (not included — see Dataset)
-│               ├── left/0.png
-│               ├── rear/0.png
-│               ├── right/0.png
-│               └── bev/0.png          # Ground truth overhead image (optional)
+│       │   ├── ui/theme/
+│       │   │   ├── Color.kt
+│       │   │   ├── Theme.kt
+│       │   │   └── Type.kt
+│       │   ├── BevProcessor.kt        ← Core IPM algorithm — all geometry lives here
+│       │   └── MainActivity.kt        ← Jetpack Compose TV UI and orchestration
+│       ├── res/                       ← icons, strings, themes
+│       └── AndroidManifest.xml
+│
+├── Camera Calibration Parameters/         
+│   ├── camera_intrinsics.yml          ← Calibrated fisheye lens parameters
+│   └── camera_positions_for_extrinsics.txt
+│
 ├── docs/
-│   ├── appraid_bev_system_flowchart.html   # Full pipeline flowchart
-│   ├── bev_slides_full.html                # 18-slide engineering presentation
-│   
-├── camera_intrinsics.yml              # Calibrated fisheye lens parameters
-├── camera_positions_for_extrinsics.txt # Camera mount positions and orientations
-└── README.md
+│   ├── index.html                     ← landing page 18-slide engineering presentation (GitHub Pages)
+│   ├── appraid_bev_system_flowchart.jpg
+│   ├── bev_animated_flowchart.html    ← Full pipeline flowchart
+│   ├── bev_output.png                 ← sample output for README
+│ 
+│
+├── gradle/
+│   ├── wrapper/
+│   │   ├── gradle-wrapper.jar
+│   │   └── gradle-wrapper.properties
+│   └── libs.versions.toml
+│
+├── .gitignore
+├── LICENSE
+├── README.md
+├── build.gradle.kts
+├── gradle.properties
+├── gradlew
+├── gradlew.bat
+└── settings.gradle.kts
+
 ```
 
 ---
