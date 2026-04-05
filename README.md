@@ -2,7 +2,7 @@
 
 > Pure-Kotlin surround-view stitching from four fisheye cameras, running entirely on a Jetson Nano with Android TV. No server. No neural network at runtime. No GPU required.
 
-**Part of the Appraid Tech Project · March 2026**
+**Appraid Tech · March 2026**
 
 ---
 
@@ -72,7 +72,7 @@ Android-BEV-App/
 ├── app/
 │   └── src/main/
 │       ├── assets/
-│       │   └── bev_images/            ← Fisheye images
+│       │   └── bev_images/            ← Fisheye input images
 │       │       ├── front/0.png
 │       │       ├── left/0.png
 │       │       ├── rear/0.png
@@ -122,7 +122,6 @@ Android-BEV-App/
 
 ### Intrinsics — `camera_intrinsics.yml`
 
-Calibrated using a 9×6 checkerboard with 24.23 mm square size.
 The camera model is the **Mei Unified Projection Model** (single-mirror omnidirectional model).
 
 | Parameter | Value | Description |
@@ -268,8 +267,7 @@ finalRGB = (bevR/totalW, bevG/totalW, bevB/totalW)  clamped 0–255
    ```
    app/src/main/assets/bev_images/{front,left,rear,right}/0.png
    ```
-   Images must be 1280 × 1080 px (or will be auto-scaled).
-
+   
 5. Connect your device and click **Run** (Shift+F10)
 
 ### `local.properties`
@@ -303,8 +301,6 @@ These are fundamental physical constraints of IPM, not software bugs.
 
 **3D object warping** — IPM assumes Y = 0 everywhere. Other vehicles, walls, and pedestrians appear stretched because their actual height is non-zero.
 
-**Car body artifact** — Side cameras project the ego vehicle's own body into the BEV. Covered by the car box overlay. Unavoidable in all camera-only IPM systems.
-
 ---
 
 ## Method Comparison
@@ -316,15 +312,6 @@ These are fundamental physical constraints of IPM, not software bugs.
 | Side lane quality | Blurry (physics) | Sharp | Sharp |
 | Explainability | Full | Black box | Partial |
 | APK size | Minimal | +50–200 MB | Moderate |
-
----
-
-## Roadmap
-
-- [ ] Real-time camera feed via Android Camera2 API
-- [ ] Multi-threaded pixel loop with Kotlin coroutines → target < 1 second
-- [ ] F2BEV neural network refinement for side-lane correction
-- [ ] Port to Android Automotive OS (AAOS) with EVS camera access
 
 ---
 
@@ -342,4 +329,4 @@ MIT License. The FB-SSEM dataset is subject to its own license — see the origi
 
 ---
 
-*Appraid Project · Hassan Tarek · March 2026*
+*Appraid Tech Project · Hassan Tarek · March 2026*
